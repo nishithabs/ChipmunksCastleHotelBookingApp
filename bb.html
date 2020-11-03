@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hotel Booking </title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/pickmeup.min.js"></script>
+    <script type="text/javascript" src="js/handleCounter.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/pickmeup.css">
+    <link rel="stylesheet" type="text/css" href="css/handle-counter.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.scrollUp.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>   
+</head>
+<body>
+<section class="tm-main">
+    <p><h1>BOOKING</h1></p>
+</section>
+<section class="tm-booking">
+<form>
+     <div class="tm-form1">
+        <input type="text" name="name" placeholder="Name">  
+        <input type="email" name="email" placeholder="E-mail"> 
+        <label  for="rooms" id="inlinelable">Rooms</label>
+        <select name="Rooms" id="rooms">
+            <option value="luxurys">Luxury Suite</option>
+            <option value="deluxs">Deluxe Suite</option>
+            <option value="premiers">Executive Suite</option>
+            <option value="Luxuryr">Luxury Room</option>
+            <option value="deluxs">Deluxe Room</option>
+            <option value="premierr">Executive Room</option>
+        </select>    
+        <div class="tm-num1" id="handleCounter1">    
+        <label for="number1" >Number of Rooms</label><br/>
+        <button type="button" class="counter-minus btn btn-primary">- </button>
+        <input type="text" name="number1" id="number1" value="1">
+        <button type="button" class="counter-plus btn btn-primary">+  </button>
+        </div>
+        <div class="tm-num2" id="handleCounter2">      
+        <label for="number2">Number of Guests</label><br/>
+        <button type="button" class="counter-minus btn btn-primary">-</button>
+        <input type="text" name="number2" id="number2" value="1">
+        <button type="button" class="counter-plus btn btn-primary">+</button>
+        </div>
+    </div>
+    <div class="vertical-line"> </div>
+    <div class="tm-form2">
+        <div class="tm-cl">
+        <label for="date1" class="arrival">Visiting Dates from Arrival to Departure</label>
+        <input type="text" name="date1" class="range" readonly="readonly"> 
+        <input type="submit" id="sub" value="Proceed"> 
+        </div>
+    </div>
+</form>
+
+</section>
+<a href="index.html"> <p>Back to Home Page</p></a>
+</body>
+</html>
+

@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Hotel Website | Contact </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<script>
+			function validateName() {
+        var name = document.getElementById('contact-name').value;
+        if(name.length == 0) {
+        Prompt('Name is required', 'name-error' , 'red')
+        return false;
+        }
+        if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+        Prompt('Please enter First and Last Name.','name-error', 'red');
+        return false;
+        }
+        Prompt('Valid', 'name-error', 'green');
+        return true;
+    }
+    function validateSubject() {
+        var subject = document.getElementById('subject').value;
+        if(subject.length == 0) {
+        Prompt('Subject is required.', 'subject-error', 'red');
+        return false;
+        }
+        if(!subject.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+        Prompt('Enter subject' ,'subject-error', 'red');
+        return false;
+        }
+        Prompt('Valid', 'subject-error', 'green');
+        return true;
+    }
+    function validateEmail () {
+        var email = document.getElementById('contact-email').value;
+        if(email.length == 0) {
+        Prompt('Email Invalid','email-error', 'red');
+        return false;
+        }
+        if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+        Prompt('Email Invalid', 'email-error', 'red');
+        return false;
+        }
+        Prompt('Valid', 'email-error', 'green');
+        return true;
+	}
+	function PhoneNumberValidation() {
+
+        var txtPhone = document.getElementById("contact-phone").value;
+		var mobileno = /^((\\+91-?)|0)?[0-9]{10}$/;
+		if(txtPhone.length == 0) {
+        Prompt('Number is required.', 'number-error', 'red');
+        return false;
+        }
+        if ((txtPhone.match(mobileno))) {
+	    Prompt('Valid', 'phone-error', 'green');
+        return true;
+        }
+        else {
+	    Prompt('Number Invalid', 'phone-error', 'red');
+        return false;
+        }
+    }
+	function validateForm() {
+        if (!validateName() || !validateSubject() || !validateEmail() || !PhoneNumberValidation() || !validateMessage()) {
+        jsShow('submit-error');
+        Prompt('Please fix errors to submit.', 'submit-error', 'red');
+        setTimeout(function(){jsShow('submit-error');},2000);
+        return false;
+        } 
+    }
+
+    function jsShow(id) {
+         document.getElementById(id).style.display = 'block';
+    }
+	function validateComments(input) {
+   if (input.value.length < 20) {
+     input.setCustomValidity("You need to comment in more detail.");
+   }
+   else {
+     // There's no error. Clear any error message.
+     input.setCustomValidity("");
+   }
+ }
+
+    function Prompt(message, promptLocation, color) {
+         document.getElementById(promptLocation).innerHTML = message;
+         document.getElementById(promptLocation).style.color = color;
+	}
+	function NameinCapital() {
+  var x = document.getElementById("contact-name");
+  x.value = x.value.toUpperCase();
+}
+	   </script>
+		<!---start-Wrap--->
+			<!---start-header--->
+			<div class="header">
+				<div class="wrap">
+					<div class="header-top">
+						<div class="logo">
+							<a href="index.html"><img src="images/logo2.png" title="logo" /></a>
+						</div>
+						<div class="contact-info">
+							<p class="phone">Call us : <a href="#">929XXXXXXXX</a></p>
+							<p class="code">BROUGHT TO YOU BY: Nishitha</p>
+						</div>
+						<div class="clear"> </div>
+					</div>
+				</div>
+				<div class="header-top-nav">
+					<div class="wrap">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About & Services</a></li>
+							<li><a href="rooms.html">Booking</a></li>
+							<li class="active"><a href="contact.html">Contact</a></li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!---End-header--->
+			<div class="clear"> </div>
+			<!---start-content----->
+			<div class="content">
+				<div class="wrap">
+					<!-------start-contatct------>
+					<div class="contact">
+				<div class="section group">				
+				<div class="col span_1_of_3">
+					<div class="contact_info">
+			    	 	
+      				</div>
+      			<div class="company_address">
+				     	<h3>Chipmunk's Castle</h3>
+						   		<p>Castle Street</p>
+						   		<p>Goa, India</p>
+				   		<p>Phone:(929) XXXXXXX</p>
+				   		<p>Fax: (000) 00000000</p>
+				 	 	<p>Email: <span>nishitha@bu.edu</span></p>
+				   		<p>Follow us on: <span>Facebook</span>, <span>Twitter</span></p>
+						<p><b>This project is brought to you by Nishitha</b></p>
+				   </div>
+				</div>				
+				<div class="col span_2_of_3">
+				  <div class="contact-form">
+					  <h3>Contact Us</h3>
+					  <form action="#" onsubmit="return validateForm()">
+					  <div>
+						<span><label>FULL NAME</label></span>
+						<input type="text" class="textbox" id="contact-name" name="name" onchange="NameinCapital()"  placeholder="Name"  onkeyup='validateName()'>
+						<span class='error-message' id='name-error'></span>
+					  </div> <br>
+			
+					  <div>
+						<span><label>E-MAIL ID</label></span>
+						<input type="text" class="textbox" id="contact-email" name="email" placeholder="Email" onkeyup='validateEmail()'>
+						<span class='error-message' id='email-error'></span>
+					  </div><br>
+
+					  <div>
+						<span><label>MOBILE NUMBER</label></span>
+						<span><input type="text" class="textbox" id ="contact-phone" pattern="\d*" x-autocompletetype="tel" onkeyup='PhoneNumberValidation()' required placeholder="Mobile Phone Number" ></span>
+				        <span class='error-message' id='number-error'></span>
+					</div><br>
+		  
+					  <div>
+						<span><label>SUBJECT</label></span>
+						<textarea class="textbox" rows="5" id='message'  name='message'  placeholder="Message"  oninput="validateComments(this)" onkeyup='validateMessage()' required></textarea>
+						<span class='error-message' id='message-error'></span>
+					  </div><br>
+			
+					<button onclick='return validateForm()' class="btn btn-default" style="background-color:steelblue; color:white">Submit</button>
+					<span class='error-message' id='submit-error'></span>
+
+					
+					    </form>
+
+				    </div>
+  				</div>				
+			  </div>
+			</div>
+			<!-----End--services------>
+				</div>
+				<div class="clear"> </div>
+				<div class="boxs">
+				<div class="wrap">
+				<div class="box">
+					 
+				</div>
+				
+				<div class="box">
+					
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<!---start-box---->
+		</div>
+		<!---start-copy-Right----->
+		<div class="copy-tight">
+			<p>Copyright:By Nishitha BS 2020-2021</p>
+		</div>
+		<!---End-copy-Right----->
+			</div>
+			<!---End-content----->
+		</div>
+		<!---End-Wrap--->
+	</body>
+</html>
+

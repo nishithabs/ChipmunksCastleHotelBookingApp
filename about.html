@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Hotel Website | About & Services</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	</head>
+	<body>
+		<!---start-Wrap--->
+			<!---start-header--->
+			<div class="header">
+				<div class="wrap">
+					<div class="header-top">
+						<div class="logo">
+							<a href="index.html"><img src="images/logo2.png" title="logo" /></a>
+						</div>
+						<div class="contact-info">
+							<p class="phone">Call us : <a href="#">929XXXXXXXX</a></p>
+							<p class="code">BROUGHT TO YOU BY: Nishitha</p>
+						</div>
+						<div class="clear"> </div>
+					</div>
+				</div>
+				<div class="header-top-nav">
+					<div class="wrap">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="about.html">About & Services</a></li>
+							<li><a href="rooms.html">Booking</a></li>
+							<li ><a href="contact.html">Contact</a></li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!---End-header--->
+			<div class="clear"> </div>
+			<!---start-content----->
+			<div class="content">
+				<div class="wrap">
+				<!---start-about---->
+				<div class="about">
+				<div class="about-grids">
+					<div class="about-grid">
+						<h3>About Our Hotel</h3>
+						<a href="#"><img src="images/slider1.jpg" title="about"></a>
+						<p>The Chipmunk's Castle is an all suite hotel nestled on 6 acres along the pristine Goan coastline. 
+							The castle, cradled by the majestic western ghat range along the confluence of the famous river, offers amazing view of the sea.
+							 With a mile-long exclusive beachfront, it is truly one of the most exquisite beach hotels in Goa.
+							<span id="dots">...</span><span id="more">
+							 Amidst grand Portuguese style architecture, meticulously landscaped gardens, the signature spa, 
+							  enjoy the luxury of oceanfront privacy and seclusion in true Indian style. 
+							  Upon arrival, the resort welcomes you into the grand lobby with rustic chandeliers, antique long-handled ceiling fans and a grand staircase overlooking a hand-painting.
+							   The resort offers 100 Deluxe suites, 20 Luxury suites, 30 Executive suites. 
+							   Other facilities include unique fine dining restaurants, water sports, Swimming Pool.
+							  The hotel is also equipped with seven banquet halls/meeting rooms, ideal for all types of corporate events, conference facility, meeting facility, weddings ceremonies and wedding receptions.
+							 </span>
+							</p>
+							<script>
+								function myFunction() {
+								  var dots = document.getElementById("dots");
+								  var moreText = document.getElementById("more");
+								  var btnText = document.getElementById("myBtn");
+								
+								  if (dots.style.display === "none") {
+									dots.style.display = "inline";
+									btnText.innerHTML = "Read more"; 
+									moreText.style.display = "none";
+								  } else {
+									dots.style.display = "none";
+									btnText.innerHTML = "Read less"; 
+									moreText.style.display = "inline";
+								  }
+								}
+								</script>
+						<button onclick="myFunction()" id="myBtn" class="button1">Read more</button>
+					</div>
+					<div class="about-grid center-grid1">
+						<h3>WHY CHOOSE US?</h3>
+						<p>We are the best in town.</p>
+					</div>
+					<div class="about-grid last-grid">
+						<h3>Our Hotel's Staff Info.</h3>
+						<div class="about-team">
+							<div class="client">
+								<div class="about-team-left">
+									<a href="#"><img src="images/c1.jpg" title="client-name"></a>
+								</div>
+								<div class="about-team-right">
+									<p>They provide the best service at the reception.</p>
+								</div>
+								<div class="clear"> </div>
+							</div>
+							<div class="client">
+								<div class="about-team-left">
+									<a href="#"><img src="images/c2.jpg" title="client-name"></a>
+								</div>
+								<div class="about-team-right">
+									<p>They provide the best room service.</p>
+								</div>
+								<div class="clear"> </div>
+							</div>
+							<div class="client">
+								<div class="about-team-left">
+									<a href="#"><img src="images/c2.jpg" title="client-name"></a>
+								</div>
+								<div class="about-team-right">
+									<p>They provide the best food from our exclusive restaurant</p>
+								</div>
+								<div class="clear"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"> </div>
+				</div>
+			</div>
+			</div>
+				<!---End-about---->
+					<!---start-box---->
+		</div>
+		<div class="content">
+			<div class="wrap">
+				<!-----start--services------>
+				<div class="services">
+					<div class="service-content">
+						<h3>Our Hotel Services</h3>
+						<ul>
+							<li><span>1.</span></li>
+							<li><p><a href="#">CULTURE SHOW</a>There is a splendid shows conducted during the weekends and on special occasions.</p></li>
+							<div class="clear"> </div>
+						</ul>
+						<ul>
+							<li><span>2.</span></li>
+							<li><p><a href="#">CONFERENCE HALL</a>The hotel provides the conference halls to arrange for meetings or any other events.</p></li>
+							<div class="clear"> </div>
+						</ul>
+						
+					</div>
+					<div class="services-sidebar">
+					<section class="psection"> <h3>WE PROVIDE ACTIVITIES</h3></section>	
+						
+							<script>
+								var promise1 = new Promise(function(resolve,reject){
+									$.ajax({
+											url: 'https://www.zumatra.com/teach/promise_10.php',
+											type: 'GET',
+											success: function(data) {
+												resolve(data)
+											},
+											error: function(error) {
+												reject(error)
+											},
+										})
+								});
+								var promise2 = new Promise(function(resolve,reject){
+									$.ajax({
+											url: 'https://www.zumatra.com/teach/promise_5.php',
+											type: 'GET',
+											success: function(data) {
+												resolve(data)
+											},
+											error: function(error) {
+												reject(error)
+											},
+										})
+								});       
+							
+						  
+							   function RandomColor() {
+								var letters = 'ABCDEFGHI1234567';
+								var color = '#';
+								for (var i = 0; i < 3; i++) {
+									color += letters[Math.floor(Math.random() * 16)];
+								}
+								return color;
+								}
+							$(function() {
+								$('button').on("click",function(){
+									Promise.all([promise1,promise2]).then(function(res){
+										console.log("All promises done: " + res);
+										console.log(typeof(res));
+										$.each(res,function(i,value){
+											$.each(value,function(i,val){
+												console.log(val);
+												color = RandomColor();
+												$("#colour").append("<div id='draggable' class='circle' style='background:"+ color + ";'>"+val+"<div>");
+												$(".circle").draggable(); 
+											});
+										});
+									});
+								});
+							});
+							$( function() {  
+							$( "#draggable" ).droppable( 
+								{ 
+									drop :function() 
+								{ 
+								} 
+								} ); 
+								} ); 
+							</script>
+							
+							<button class="pbutton">OTHER FACILITY</button>
+							<section id="colour" class="psection"> </section>
+					</div>
+					<div class="clear"> </div>
+				</div>
+			</div>
+			<div class="clear"> </div>
+			<div class="boxs">
+			<div class="wrap">
+			<div class="box">
+				 
+			</div>
+			
+			<div class="box">
+				
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<!---start-box---->
+	</div>
+	<!---start-copy-Right----->
+	<div class="copy-tight">
+		<p>Copyright:By Nishitha BS 2020-2021</p>
+	</div>
+	<!---End-copy-Right----->
+		</div>
+		<!---End-content----->
+	</div>
+	<!---End-Wrap--->
+</body>
+</html>
